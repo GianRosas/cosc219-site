@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Gian Rosas</title>
+</head>
+<body>
+    <header>
+        <h1>Contact Information</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form>
+            <!--Name-->
+            <label for="username">Name: </label>
+            <input type="text" id="username" name="username" maxlength="20" required>
+
+            <!--Email-->
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+
+            <!--Phone-->
+            <label for="phone">Phone: </label>
+            <input type="tel" id="phone" name="phone" maxlength="10">
+
+            <!--Company/Organization-->
+            <label for="comp">Company/Organization: </label>
+            <input type="text" id="comp" name="company" maxlength="50">
+
+            <!--Reason-->
+            <label for="reason">Reason for Contact: </label>
+            <select id="reason" name="reason" required>
+                <option value="">Select an reason ...</option>
+                <option value="job">Job Opportunity</option>
+                <option value="project">Project / Collaboration</option>
+                <option value="study">University / Study</option>
+                <option value="questions">General Questions</option>
+            </select>
+
+            <!--Contact-->
+            <fieldset>
+                <legend>Preferred Contact Method</legend>
+
+                <input type="radio" id="c-phone" name="contact" value="phone" required>
+                <label for="c-phone">Phone Call</label>
+
+                <input type="radio" id="c-message" name="contact" value="message">
+                <label for="c-message">Text Message</label>
+
+                <input type="radio" id="c-email" name="contact" value="email">
+                <label for="c-email">Email</label>
+            </fieldset>
+
+            <!--Contacting Message-->
+            <label for="msg">Message: </label>
+            <textarea id="msg" name="msg" maxlength="1000" placeholder="Tell me about your project, opportunity, or question..." required></textarea>
+
+            <!--Contacting Permission-->
+            <fieldset>
+                <legend>Permission to Contact</legend>
+                <input type="checkbox" id="agree" name="agree" value="agree message" required>
+                <label for="agree">I agree to be contacted</label>
+            </fieldset>
+
+            <!--Submit Button-->
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Created by Gian Rosas for COSC 219.</p>
+    </footer>
+</body>
+</html>
