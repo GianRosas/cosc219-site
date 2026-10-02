@@ -1,17 +1,35 @@
+/*  CUSTOM PROPERTIES  */
+
 :root {
- --background: #DCEEFF;
- --surface: #F7FBFF;
- --brand: #3B82C4;
- --text: #17212B;
- --muted: #455A6B;
- --space: 1rem;
+    --background: #DCEEFF;
+    --surface: #F7FBFF;
+    --brand: #3B82C4;
+    --text: #17212B;
+    --muted: #455A6B;
+    --space: 1rem;
 }
+
+
+/*  BOX MODEL  */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*  GENERAL / TYPE SELECTORS  */
 
 body {
     background-color: var(--background);
     color: var(--text);
-    font-family:  Arial,Helvetica,sans-serif;
-    line-height: 1.5; 
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+main {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: var(--space);
 }
 
 h1 {
@@ -34,14 +52,59 @@ h2 {
 
 p {
     color: var(--text);
-    font-family: Arial,Helvetica,sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.03rem;
     margin: 0 0 var(--space) 0;
 }
 
-label, 
+a {
+    color: var(--brand);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+/*  SECTIONS  */
+
+section {
+    border: 2.5px solid var(--brand);
+    border-radius: 1.5rem;
+    padding: var(--space);
+    margin: var(--space) 0;
+}
+
+/* Styling Images */
+
+img {
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+    margin: var(--space) auto;
+}
+
+/*  DESCENDANT SELECTOR  */
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/*  CLASS SELECTOR  */
+
+.intro {
+    color: var(--muted);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+/*  FORM  */
+
+label,
 legend {
     color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
@@ -50,39 +113,83 @@ legend {
     letter-spacing: 0.02rem;
 }
 
-a {
-    color: var(--brand);
-    font-weight: 500;
-    text-decoration-line: none;
+/* General form controls first */
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: var(--space);
+    border: 2px solid var(--muted);
+    background-color: var(--surface);
+    border-radius: 0.5rem;
 }
 
-a:focus{
-    outline: 2px solid var(--brand);
-    outline-offset: 2px;
+/* Specific inputs AFTER general input styles */
+
+input[type="email"] {
+    border: 2px solid var(--muted);
+    background-color: var(--surface);
 }
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    padding: 0;
+}
+
+
+/*  FIELDSET  */
+
+fieldset {
+    border: 2px solid var(--muted);
+    border-radius: 0.5rem;
+    padding: var(--space);
+    margin: var(--space) 0;
+}
+
+
+/*  BUTTON  */
+
+button {
+    background-color: var(--surface);
+    color: var(--muted);
+    border: 2px solid var(--muted);
+    border-radius: 0.5rem;
+    padding: var(--space);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+/*  HOVER  */
 
 nav a:hover {
     color: var(--brand);
     text-decoration: underline;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
-section a:hover, 
+section a:hover,
 p a:hover {
     color: var(--brand);
     text-decoration: underline;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
-.intro {
-    color: var(--muted);
-    font-size: 1.5rem;
-    font-weight: 200;
+button:hover {
+    background-color: var(--brand);
+    color: var(--surface);
 }
 
-input[type="email"] {
-    border: 2px solid var(--brand);
-    background-color: var(--surface);
+
+/*  KEYBOARD FOCUS  */
+
+a:focus {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
 }
 
 input:focus,
@@ -91,8 +198,4 @@ textarea:focus,
 button:focus {
     outline: 2px solid var(--brand);
     outline-offset: 2px;
-}
-
-* {
-    box-sizing: border-box;
 }
