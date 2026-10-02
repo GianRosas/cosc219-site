@@ -1,7 +1,6 @@
 /*  CUSTOM PROPERTIES  */
 
 :root {
-    --background: #DCEEFF;
     --surface: #F7FBFF;
     --brand: #3B82C4;
     --text: #17212B;
@@ -20,7 +19,7 @@
 /*  GENERAL / TYPE SELECTORS  */
 
 body {
-    background-color: var(--background);
+    background-color: #DCEEFF;
     color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
